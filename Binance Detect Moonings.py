@@ -476,8 +476,10 @@ if __name__ == '__main__':
     parsed_config = load_config(config_file)
     parsed_creds = load_config(creds_file)
 
+    # print (parsed_config)
+    # print (parsed_creds)
     # Default no debugging
-    DEBUG = False
+    DEBUG = True
 
     # Load system vars
     TEST_MODE = parsed_config['script_options']['TEST_MODE']

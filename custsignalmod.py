@@ -18,7 +18,7 @@ INTERVAL = Interval.INTERVAL_5_MINUTES #Timeframe for analysis
 
 EXCHANGE = 'BINANCE'
 SCREENER = 'CRYPTO'
-PAIR_WITH = 'USDT'
+PAIR_WITH = 'BUSD'
 TICKERS = 'signalsample.txt'
 TIME_TO_WAIT = 4 # Minutes to wait between analysis
 FULL_LOG = False # List analysis result to console

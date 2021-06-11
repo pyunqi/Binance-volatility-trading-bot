@@ -32,7 +32,7 @@ def test_api_key(client, BinanceAPIException):
     
     except BinanceAPIException as e:   
     
-      
+        print(e.code)
         if e.code in  [-2015,-2014]:
             bad_key = "Your API key is not formatted correctly..."
             america = "If you are in america, you will have to update the config to set AMERICAN_USER: True"

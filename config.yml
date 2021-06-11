@@ -2,7 +2,7 @@
 script_options:
   # Switch between testnet and mainnet
   # Setting this to False will use REAL funds, use at your own risk
-  TEST_MODE: True
+  TEST_MODE: False
   LOG_TRADES: True
   LOG_FILE: 'trades.txt'
 
@@ -15,28 +15,28 @@ script_options:
 trading_options:
  
   # select your base currency to use for trading (trade for example USDT pairs)
-  PAIR_WITH: USDT
+  PAIR_WITH: BUSD
 
   # Total amount per trade (your base currency balance must be at least MAX_COINS * QUANTITY)
   # Binance uses a minimum of 10 USDT per trade, add a bit extra to enable selling if the price drops.
   # Recommended: no less than 12 USDT. Suggested: 15 or more.
-  QUANTITY: 15
+  QUANTITY: 50
 
   # List of trading pairs to exclude
   # by default we're excluding the most popular fiat pairs
   FIATS:
-    - EURUSDT
-    - GBPUSDT
-    - JPYUSDT
-    - USDUSDT
+    - EURBUSD
+    - GBPBUSD
+    - JPYBUSD
+    - USDBUSD
     - DOWN
     - UP
 
   # Maximum number of trade 'slots' at any time (your USDT balance must be at least MAX_COINS * QUANTITY)
-  MAX_COINS: 7
+  MAX_COINS: 3
 
   # the amount of time in MINUTES to calculate the difference from the current price (minimum: 1).
-  TIME_DIFFERENCE: 2
+  TIME_DIFFERENCE: 4
 
   # Number of times to check for TP/SL during each TIME_DIFFERENCE (minimum: 1).
   # Don't spam the Binance API, you will be banned (max 1200 requests per minute per IP).

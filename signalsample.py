@@ -12,10 +12,10 @@ MY_SCREENER = 'CRYPTO'
 MY_FIRST_INTERVAL = Interval.INTERVAL_1_MINUTE
 MY_SECOND_INTERVAL = Interval.INTERVAL_5_MINUTES
 TA_BUY_THRESHOLD = 18 # How many of the 26 indicators to indicate a buy
-PAIR_WITH = 'USDT'
+PAIR_WITH = 'BUSD'
 TICKERS = 'signalsample.txt'
-TIME_TO_WAIT = 4 # Minutes to wait between analysis
-FULL_LOG = False # List anylysis result to console
+TIME_TO_WAIT = 2 # Minutes to wait between analysis
+FULL_LOG = True # List anylysis result to console
 
 def analyze(pairs):
     taMax = 0
