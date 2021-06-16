@@ -557,8 +557,8 @@ if __name__ == '__main__':
 
     if not TEST_MODE:
         if not args.notimeout: # if notimeout skip this (fast for dev tests)
-            print('WARNING: You are using the Mainnet and live funds. Waiting 30 seconds as a security measure')
-            time.sleep(30)
+            print('WARNING: You are using the Mainnet and live funds. Waiting 5 seconds as a security measure')
+            time.sleep(5)
 
     signals = glob.glob("signals/*.exs")
     for filename in signals:
