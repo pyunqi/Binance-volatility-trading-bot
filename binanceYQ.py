@@ -592,7 +592,15 @@ if __name__ == '__main__':
     # seed initial prices
     get_price()
     while True:
-        orders, last_price, volume = buy()
-        update_portfolio(orders, last_price, volume)
-        coins_sold = sell_coins()
-        remove_from_portfolio(coins_sold)
+        try:
+            orders, last_price, volume = buy()
+            update_portfolio(orders, last_price, volume)
+            coins_sold = sell_coins()
+            remove_from_portfolio(coins_sold)
+        except BinanceAPIException as e:
+             time.sleep(30)
+             if AMERICAN_USER:
+                 client = Client(access_key, secret_key, tld='us')
+             else:
+                 client = Client(access_key, secret_key)
+             continue
