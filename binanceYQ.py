@@ -598,6 +598,8 @@ if __name__ == '__main__':
             coins_sold = sell_coins()
             remove_from_portfolio(coins_sold)
         except BinanceAPIException as e:
+             timestamp = datetime.now().strftime("%d/%m %H:%M:%S")
+             write_log(f"B Ex happend{timestamp}")
              time.sleep(30)
              if AMERICAN_USER:
                  client = Client(access_key, secret_key, tld='us')
